@@ -3,7 +3,7 @@
 	"package": "morgs.mplantzfood.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"PlantEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
