@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "morgs.mplantzfood.client.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"PlantEntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

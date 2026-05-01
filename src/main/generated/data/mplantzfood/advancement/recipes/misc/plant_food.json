@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dna": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mplantzfood:dna"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mplantzfood:plant_food"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dna"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mplantzfood:plant_food"
+    ]
+  }
+}

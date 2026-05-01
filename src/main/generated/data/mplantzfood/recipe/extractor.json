@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "group_dna",
+  "key": {
+    "D": "minecraft:dropper",
+    "I": "minecraft:iron_block",
+    "R": "minecraft:redstone",
+    "S": "plantz:sun"
+  },
+  "pattern": [
+    "RS",
+    "ID"
+  ],
+  "result": {
+    "id": "mplantzfood:extractor"
+  }
+}
