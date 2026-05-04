@@ -37,7 +37,7 @@ public class items {
         return item;
     }
 
-    public static final Item plant_food = register("plant_food", plantfoodItem::new, new Item.Properties());
+    public static final Item plant_food = register("plant_food", SunItem::new, new Item.Properties());
     public static final Item dna = register("dna", Item::new, new Item.Properties());
 
     //CREATIVE TAB
