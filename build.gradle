@@ -46,7 +46,8 @@ dependencies {
 
 	//Plants and Zombies [CHANGE TO OFFICIAL GITHUB LATER PLEASE]
 	implementation 'com.github.joshxviii:plants-and-zombies:c0b5f1eb0b'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.3.21"
+	implementation "org.jetbrains.kotlin:kotlin-metadata-jvm:2.3.21"
 
 }
 

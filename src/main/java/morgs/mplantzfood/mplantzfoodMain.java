@@ -1,6 +1,9 @@
 package morgs.mplantzfood;
 
+import morgs.mplantzfood.mixin.PlantEntityMixin;
+import morgs.mplantzfood.setup.PlantFoodEffects;
 import morgs.mplantzfood.setup.blockEntities;
+import morgs.mplantzfood.setup.util.Util;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -8,8 +11,11 @@ import org.slf4j.LoggerFactory;
 import morgs.mplantzfood.setup.blocks;
 import morgs.mplantzfood.setup.items;
 
+import morgs.mplantzfood.mixin.PlantEntityMixin;
 
-public class mplantzfoodMain implements ModInitializer {
+
+public class mplantzfoodMain
+		implements ModInitializer {
 	public static final String MOD_ID = "mplantzfood";
 
 	// This logger is used to write text to the console and the log file.
@@ -26,5 +32,6 @@ public class mplantzfoodMain implements ModInitializer {
 		items.initialize();
 		blocks.initialize();
 		blockEntities.initialize();
+		Util.initialize();
 	}
 }

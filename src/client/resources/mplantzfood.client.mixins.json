@@ -3,7 +3,8 @@
 	"package": "morgs.mplantzfood.client.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"PlantEntityMixin"
+		"PlantEntityMixin",
+		"SunflowerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
