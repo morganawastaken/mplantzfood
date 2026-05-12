@@ -1,44 +1,35 @@
 package morgs.mplantzfood.setup;
 
-import joshxviii.plantz.ai.goal.ActionGoal;
-import joshxviii.plantz.ai.goal.GenerateSunGoal;
-import joshxviii.plantz.entity.plant.Plant;
 import joshxviii.plantz.entity.plant.Sunflower;
-import kotlin.Unit;
-import kotlin.jvm.functions.Function0;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.ai.goal.Goal;
+import morgs.mplantzfood.ai.SunPlantFoodGoal;
+import morgs.mplantzfood.mixin.MobAccessor;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.SpellParticleOption;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.goal.GoalSelector;
 
 import java.util.HashMap;
-import java.util.function.Predicate;
 
-public class PlantFoodEffects {
-    int timer;
-    boolean effecthappened;
-    int planthash;
-    static HashMap m = new HashMap<Integer, PlantFoodEffects>();
+public class PlantFoodEffects extends MobEffect {
+    protected PlantFoodEffects() {
+        super(MobEffectCategory.BENEFICIAL, 2);
+    }
 
-    public PlantFoodEffects(int timer, boolean effecthappened, int planthash) {
-        this.timer = timer;
-        this.effecthappened = effecthappened;
-        this.planthash = planthash;
+    @Override
+    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier){
+        return true;
+    }
+
+    @Override
+    public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier){
+        return super.applyEffectTick(level, entity, amplifier);
     }
 
     public static void sunflowerFoodEffect(int i){
         System.out.println("\"Delicious!\" - said Sunflower" + i);
-        PlantFoodEffects TIMER = new PlantFoodEffects(10, false, i);
-        if (!(m.containsKey(i))){
-            m.putIfAbsent(i, TIMER);
-        };
-        if (m.containsKey(i)) {
-            var timerupdate = m.get(i);
-        }
     }
-
-    void timerRefresh(int x){
-        this.timer = x;
-    };
 }
 

@@ -1,15 +1,14 @@
 package morgs.mplantzfood;
 
 import morgs.mplantzfood.mixin.PlantEntityMixin;
-import morgs.mplantzfood.setup.PlantFoodEffects;
-import morgs.mplantzfood.setup.blockEntities;
+import morgs.mplantzfood.setup.*;
 import morgs.mplantzfood.setup.util.Util;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.client.rendering.v1.level.LevelExtractionContext;
+import net.minecraft.world.level.Level;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import morgs.mplantzfood.setup.blocks;
-import morgs.mplantzfood.setup.items;
 
 import morgs.mplantzfood.mixin.PlantEntityMixin;
 
@@ -33,5 +32,6 @@ public class mplantzfoodMain
 		blocks.initialize();
 		blockEntities.initialize();
 		Util.initialize();
+		RegisterFood.initialize();
 	}
 }

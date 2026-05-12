@@ -3,8 +3,9 @@
 	"package": "morgs.mplantzfood.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"PlantEntityMixin",
-		"SunflowerMixin"
+		"GenerateSunGoalAccessor",
+		"MobAccessor",
+		"PlantEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

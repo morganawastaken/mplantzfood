@@ -1,3 +1,64 @@
+package morgs.mplantzfood.ai;
+
+
+import joshxviii.plantz.entity.plant.Plant;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import morgs.mplantzfood.mixin.GenerateSunGoalAccessor;
+import morgs.mplantzfood.pazimports.GenerateSunGoal;
+import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.ai.goal.Goal;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.function.Predicate;
+
+public class SunPlantFoodGoal
+        extends GenerateSunGoal
+{
+
+    public SunPlantFoodGoal(
+            @NotNull Plant usingEntity,
+            int cooldownTime,
+            int actionDelay,
+            @NotNull Function0<@NotNull Unit> actionStartEffect,
+            @NotNull Function0<@NotNull Unit> actionEndEffect,
+            @NotNull Predicate<@NotNull PathfinderMob> actionPredicate,
+            int sunAmount, boolean generatesAtNight) {
+        super(usingEntity, cooldownTime, actionDelay, actionStartEffect,
+                actionEndEffect, actionPredicate, sunAmount, generatesAtNight);
+    }
+
+//    public boolean callDoAction(){
+//        return true;
+//    }
+//    @Override
+//    public boolean canDoAction(){return true;}
+//    @Override
+//    public boolean canUse(){return true;}
+//    @Override
+//    public boolean isInterruptable(){return false;}
+//    @Override
+//    public void stop(){}
+    int tick = 0;
+    int times = 0;
+
+    @Override
+    public void tick(){
+        if (tick == 5){
+            doAction();
+            tick = 0;
+            times++;
+        }
+        if (times == 5){
+            stop();
+        }else tick++;
+
+    }
+
+}
+
+
+
 //package morgs.mplantzfood.setup;
 //
 //import joshxviii.plantz.PazTags;

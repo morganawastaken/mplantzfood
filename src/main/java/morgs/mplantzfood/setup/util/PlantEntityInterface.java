@@ -1,7 +1,7 @@
 package morgs.mplantzfood.setup.util;
 
 import com.mojang.serialization.Keyable;
-import joshxviii.plantz.ai.goal.GenerateSunGoal;
+import morgs.mplantzfood.pazimports.GenerateSunGoal;
 import joshxviii.plantz.entity.plant.Plant;
 import kotlin.jvm.functions.Function0;
 import net.minecraft.world.entity.PathfinderMob;
